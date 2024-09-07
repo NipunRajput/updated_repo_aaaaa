@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Content Processor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Social Media Content Processor</h1>
+        <div class="alert alert-info text-center" role="alert">
+            Use this tool to process Instagram posts or X.com profiles.
+        </div>
+        <form action="{{ url_for('process_instagram') }}" method="post" class="mb-4">
+            <h3>Process Instagram Post</h3>
+            <div class="form-group">
+                <label for="instagram_url">Instagram Post URL:</label>
+                <input type="text" id="instagram_url" name="instagram_url" class="form-control" placeholder="Enter Instagram post URL" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Process Instagram Post</button>
+        </form>
+
+        <form action="{{ url_for('process_tweet') }}" method="post">
+            <h3>Process X.com Profile</h3>
+            <div class="form-group">
+                <label for="profile_url">X.com Profile URL:</label>
+                <input type="text" id="profile_url" name="profile_url" class="form-control" placeholder="Enter X.com profile URL" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Process X.com Profile</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
